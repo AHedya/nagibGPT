@@ -12,6 +12,6 @@ COPY --from=builder /app/wheels /wheels
 RUN pip install --no-cache-dir /wheels/* && rm -rf /wheels 
 COPY --from=builder /app/src /app/src  
 
-EXPOSE 8000
-
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+EXPOSE 8501
+WORKDIR /app/src
+CMD ["streamlit", "run" ,"ST_GUI.py", "--server.address", "0.0.0.0", "--server.port", "8501"]

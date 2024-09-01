@@ -1,0 +1,23 @@
+services:
+  backend:
+    pull_policy: never
+    image: nagib_backend
+    container_name: nagib_backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: runner
+    ports:
+      - 8000:8000
+  
+  frontend:
+    pull_policy: never
+    image: nagib_frontend
+    container_name: nagib_frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: runner
+    ports:
+    - 8501:8501 
+    
