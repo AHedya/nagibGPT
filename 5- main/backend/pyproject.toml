@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nagibGPT_backend"
+requires-python = "3.10.x"
+version = "0.0.1"
+dependencies = [
+    "torch",
+    "fastapi",
+    "colorama",
+    "tokenizers"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

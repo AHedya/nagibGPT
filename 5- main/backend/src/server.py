@@ -18,6 +18,7 @@ def get_model(writer):
     elif writer == 'nagib_mahfouz_all_in':
         return Nagib_Mahfouz_All_In()
     
+    
 app = FastAPI()
 
 app.add_middleware(

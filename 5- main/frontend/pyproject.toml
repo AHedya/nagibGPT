@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nagibGPT_frontend"
+requires-python = "3.10.x"
+version = "0.0.1"
+dependencies = [
+    "requests",
+    "streamlit"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
